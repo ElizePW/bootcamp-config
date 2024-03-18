@@ -57,14 +57,14 @@ bootstrap:
     idp-cdf-mappings:
     # Support multiple CDF Projects, like dev/test/prod in one config.
         - cdf-project: cdf-bootcamp-68-test # i.e. bootcamp-01-test
-          mappings:
-              - cdf-group: cdf:root
+            mappings:
+                - cdf-group: cdf:root
                 idp-source-id: d39423e0-c1c3-443d-bf7a-40d960382886
                 idp-source-name: bootcamp-68-test-admin
-              - cdf-group: cdf:all:owner
+                - cdf-group: cdf:all:owner
                 idp-source-id: 0dfa456a-b2ca-4590-8db8-6809fb0f28af # for the AAD Group to be matched to cdf-group
                 idp-source-name: bootcamp-68-test-all-owner # i.e. bootcamp-01-test-all-owner
-              - cdf-group: cdf:all:read
+                - cdf-group: cdf:all:read
                 idp-source-id: f365c5eb-648e-4da9-bbd3-071f8ee28722 # for the AAD Group to be matched to cdf-group
                 idp-source-name: bootcamp-68-test-all-read # i.e. bootcamp-01-test-all-read
                 
@@ -83,21 +83,21 @@ bootstrap:
     namespaces:
         # Typical config will have a namespace for data sources ("src") and a namespace for use cases ("uc")
         - ns-name: src
-          description: Data sources for the Ice Cream Factory # HINT
+            description: Data sources for the Ice Cream Factory # HINT
 
-          # Node names will normally follow src:001:srcname or uc:001:usecasename naming convention
-          ns-nodes:
-              - node-name: src:001:sap
+            # Node names will normally follow src:001:srcname or uc:001:usecasename naming convention
+            ns-nodes:
+                - node-name: src:001:sap
                 description: Data from SAP # HINT
         # HINT: Add another namespace below
-              - node-name: src:002:opcua
+                - node-name: src:002:opcua
                 description: Data from SAP # HINT
                 
         - ns-name: uc
-          description: Use Cases for the Ice Cream Factory # HINT
+            description: Use Cases for the Ice Cream Factory # HINT
 
-          # Node names will normally follow src:001:srcname or uc:001:usecasename naming convention
-        ns-nodes:
+            # Node names will normally follow src:001:srcname or uc:001:usecasename naming convention
+            ns-nodes:
             - node-name: uc:001:oee
             description: Use case 001 Over all Equipment effectiveness
             shared-access:
